@@ -44,9 +44,9 @@ export default function Location() {
                         viewport={{ once: true }}
                         className="flex items-center justify-center gap-4 pt-4"
                     >
-                        <div className="h-[1px] w-12 bg-rose-200" />
+                        <div className="h-px w-12 bg-rose-200" />
                         <MapPin className="w-5 h-5 text-rose-400" />
-                        <div className="h-[1px] w-12 bg-rose-200" />
+                        <div className="h-px w-12 bg-rose-200" />
                     </motion.div>
                 </motion.div>
 

@@ -1,38 +1,38 @@
 // Nanti convert ke Bahasa Indonesia
 const config = {
   data: {
-    title: "Pernikahan Fulan & Fulana", // Nanti ini otomatis
+    title: "Pernikahan Bagus & Cindy", // Nanti ini otomatis
     description:
       "Kami akan menikah dan mengundang Anda untuk turut merayakan momen istimewa ini.", // Nanti ini dibikin random
-    groomName: "Fulan",
-    brideName: "Fulana",
-    parentGroom: "Bapak Groom & Ibu Groom",
-    parentBride: "Bapak Bride & Ibu Bride",
-    date: "2024-12-24",
-    maps_url: "https://goo.gl/maps/abcdef",
+    groomName: "Bagus",
+    brideName: "Cindy",
+    parentGroom: "Bapak Muliono & Ibu Susiati",
+    parentBride: "Bapak Moktarobah & Ibu Sri Wahyuni",
+    date: "2025-06-20",
+    maps_url: "https://maps.app.goo.gl/hstofcUpNuQYCkdh8",
     maps_embed:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0000000000005!2d106.8270733147699!3d-6.175392995514422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f4f1b6d7b1e7%3A0x2e69f4f1b6d7b1e7!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1633666820004!5m2!1sid!2sid",
-    time: "16:16 - 17:30 WIB",
-    location: "Grand Ballroom, Hotel Majesty",
-    address: "Jl. Jend. Sudirman No.1, Jakarta",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d302.8830533993095!2d112.4159563582983!3d-7.116445072567044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e77f0b1ea475f63%3A0x15e7f513b999a369!2sLamongan%2C%20Tumenggungan%2C%20Lamongan%2C%20Lamongan%20Regency%2C%20East%20Java%2062214!5e0!3m2!1sen!2sid!4v1747561826623!5m2!1sen!2sid",
+    time: "10:00 - 10:30 WIB",
+    location: "Rumah Mempelai Wanita",
+    address: "Tumenggungan, Lamongan, Lamongan Regency, East Java 62214",
     ogImage: "/images/og-image.jpg",
     favicon: "/images/favicon.ico",
     agenda: [
       {
         title: "Akad Nikah",
-        date: "2024-12-24",
-        startTime: "16:16",
-        endTime: "17:30",
-        location: "Grand Ballroom, Hotel Majesty",
-        address: "Jl. Jend. Sudirman No.1, Jakarta",
+        date: "2025-06-20",
+        startTime: "10:00",
+        endTime: "10:30",
+        location: "Rumah Mempelai Wanita",
+        address: "Tumenggungan, Lamongan, Lamongan Regency, East Java 62214",
       },
       {
         title: "Resepsi Nikah",
-        date: "2024-12-24",
-        startTime: "16:16",
-        endTime: "17:30",
-        location: "Grand Ballroom, Hotel Majesty",
-        address: "Jl. Jend. Sudirman No.1, Jakarta",
+        date: "2025-06-20",
+        startTime: "10:30",
+        endTime: "Selesai",
+        location: "Rumah Mempelai Wanita",
+        address: "Tumenggungan, Lamongan, Lamongan Regency, East Java 62214",
       }
     ],
     audio: {

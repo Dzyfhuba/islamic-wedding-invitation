@@ -61,11 +61,11 @@ export default function Events() {
                             transition={{ delay: 0.5 }}
                             className="flex items-center justify-center gap-4 mt-6"
                         >
-                            <div className="h-[1px] w-12 bg-rose-200" />
+                            <div className="h-px w-12 bg-rose-200" />
                             <div className="text-rose-400">
                                 <Heart className="w-4 h-4" fill="currentColor" />
                             </div>
-                            <div className="h-[1px] w-12 bg-rose-200" />
+                            <div className="h-px w-12 bg-rose-200" />
                         </motion.div>
                     </motion.div>
 

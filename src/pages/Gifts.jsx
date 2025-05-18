@@ -59,9 +59,9 @@ export default function Gifts() {
                         transition={{ delay: 0.4 }}
                         className="flex items-center justify-center gap-4 pt-4"
                     >
-                        <div className="h-[1px] w-12 bg-rose-200" />
+                        <div className="h-px w-12 bg-rose-200" />
                         <Gift className="w-5 h-5 text-rose-400" />
-                        <div className="h-[1px] w-12 bg-rose-200" />
+                        <div className="h-px w-12 bg-rose-200" />
                     </motion.div>
 
                     {/* Message Container */}
@@ -115,11 +115,11 @@ export default function Gifts() {
                             transition={{ delay: 0.2 * index + 0.7 }}
                             className="relative group"
                         >
-                            <div className="absolute inset-0 bg-gradient-to-r from-rose-100/50 to-pink-100/50 rounded-2xl transform transition-transform group-hover:scale-105 duration-300" />
-                            <div className="relative backdrop-blur-sm bg-white/80 p-6 rounded-2xl border border-rose-100/50 shadow-lg">
+                            <div className="absolute inset-0 bg-linear-to-r from-rose-100/50 to-pink-100/50 rounded-2xl transform transition-transform group-hover:scale-105 duration-300" />
+                            <div className="relative backdrop-blur-xs bg-white/80 p-6 rounded-2xl border border-rose-100/50 shadow-lg">
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center space-x-4">
-                                        <div className="w-12 h-12 rounded-lg bg-white p-2 shadow-sm">
+                                        <div className="w-12 h-12 rounded-lg bg-white p-2 shadow-xs">
                                             <Building2 className="w-full h-full text-rose-500" />
                                         </div>
                                         <div>

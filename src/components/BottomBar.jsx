@@ -14,8 +14,8 @@ const menuItems = [
   { icon: Home, label: 'Beranda', href: '#home' },
   { icon: CalendarHeart, label: 'Event', href: '#event' },
   { icon: MapPin, label: 'Lokasi', href: '#location' },
-  { icon: Gift, label: 'Hadiah', href: '#gifts' },
-  { icon: MessageCircleHeart, label: 'Harapan', href: '#wishes' },
+  // { icon: Gift, label: 'Hadiah', href: '#gifts' },
+  // { icon: MessageCircleHeart, label: 'Harapan', href: '#wishes' },
 ];
 
 /**
@@ -39,7 +39,7 @@ const BottomBar = () => {
 
   return (
     <motion.div
-      className="fixed bottom-4 transform -translate-x-1/2 z-50 w-full px-4 max-w-[430px]"
+      className="fixed bottom-4 transform left-1/2 -translate-x-1/2 z-50 w-full px-4 max-w-[430px]"
       initial={{ y: 100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, type: "spring", stiffness: 100 }}

@@ -3,8 +3,12 @@ import config from '@/config/config';
 import { formatEventDate } from '@/lib/formatEventDate';
 import { motion } from 'framer-motion';
 import { Calendar, Clock } from 'lucide-react';
+import Foto from '@/images/foto.jpg'
 
-const LandingPage = ({ onOpenInvitation }) => (
+const LandingPage = ({ onOpenInvitation }) => {
+  const guest = new URLSearchParams(window.location.search).get('guest')
+
+  return (
   <motion.div
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
@@ -12,7 +16,7 @@ const LandingPage = ({ onOpenInvitation }) => (
     className="min-h-screen relative overflow-hidden"
   >
     {/* Decorative Background */}
-    <div className="absolute inset-0 bg-gradient-to-b from-white via-rose-50/30 to-white" />
+    <div className="absolute inset-0 bg-linear-to-b from-white via-rose-50/30 to-white" />
     <div className="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-rose-100/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />
     <div className="absolute bottom-0 left-0 w-64 h-64 md:w-96 md:h-96 bg-pink-100/20 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" />
 
@@ -22,18 +26,29 @@ const LandingPage = ({ onOpenInvitation }) => (
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="w-full max-w-md"
+        className="w-max md:max-w-6xl"
       >
         {/* Card Container */}
-        <div className="backdrop-blur-sm bg-white/50 p-6 sm:p-8 md:p-10 rounded-2xl border border-rose-100/50 shadow-xl">
+        <div className="backdrop-blur-xs bg-white/50 p-6 sm:p-8 md:p-10 rounded-2xl border border-rose-100/50 shadow-xl flex flex-col sm:flex-row gap-5">
+          <img src={Foto} className='rounded-2xl h-[30vh] sm:h-full md:max-w-[300px] sm:max-h-[80vh] w-full object-cover object-top sm:min-w-2/5' />
+
           {/* Top Decorative Line */}
-          <div className="flex items-center justify-center gap-3 mb-6 sm:mb-8">
+          {/* Horizontal Line */}
+          <div className="flex items-center justify-center gap-3 mb-6 sm:mb-8 sm:hidden">
             <div className="h-px w-12 sm:w-16 bg-rose-200/50" />
             <div className="w-2 h-2 rounded-full bg-rose-300" />
             <div className="h-px w-12 sm:w-16 bg-rose-200/50" />
           </div>
 
-          {/* Date and Time */}
+          {/* Vertical Line */}
+          <div className="hidden md:flex flex-col items-center">
+            <div className="h-full w-px bg-rose-200/50" />
+            <div className="w-2 h-2 rounded-full bg-rose-300" />
+            <div className="h-full w-px bg-rose-200/50" />
+          </div>
+
+          <div className='flex flex-col items-center justify-center'>
+            {/* Date and Time */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -72,12 +87,25 @@ const LandingPage = ({ onOpenInvitation }) => (
             </div>
           </motion.div>
 
+          {guest ? (
+            <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.7 }}
+            className="mt-5 sm:mt-5 text-center font-serif text-xl"
+          >
+            <p className='text-lg'>Dear</p>
+            <p className='font-black underline'>{guest}</p>
+          </motion.div>
+          ) : <></>}
+          
+
           {/* Open Invitation Button */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
-            className="mt-6 sm:mt-8"
+            className="mt-5 sm:mt-5"
           >
             <motion.button
               whileHover={{ scale: 1.02 }}
@@ -94,13 +122,15 @@ const LandingPage = ({ onOpenInvitation }) => (
                   →
                 </motion.span>
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-rose-600 to-rose-500 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+              <div className="absolute inset-0 bg-linear-to-r from-rose-600 to-rose-500 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
             </motion.button>
           </motion.div>
+          </div>
         </div>
       </motion.div>
     </div>
   </motion.div>
-);
+)
+};
 
 export default LandingPage;
